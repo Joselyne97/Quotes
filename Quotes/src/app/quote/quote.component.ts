@@ -6,7 +6,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes:Quote[] = [
+  quotes: Quote[] = [
     new Quote (1, 'There is nothing permanent except change', 'It was quoted by Heraclitus'),
     new Quote (2, 'Let us sacrifice ourselfs today so that our children can have a better tomorrow', 'It was quoted by A.P.J.Abdul Kalam'),
     new Quote (3, 'There is no charm equal to tenderness of heart', 'It was quoted by Jane Austen'),

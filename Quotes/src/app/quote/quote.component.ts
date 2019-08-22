@@ -14,6 +14,9 @@ export class QuoteComponent implements OnInit {
     new Quote (5, 'The only journey is the one within', 'It was quoted by Rainer Maria Rilke'),
     new Quote (6, 'Think in the morning, act in the noon, eat in the evening and sleep in the night', 'It was quoted by Will Rogers'),
   ];
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {

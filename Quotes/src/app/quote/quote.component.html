@@ -2,9 +2,12 @@
     <h1>My Favorite Quotes</h1>
     <hr>
     <ul>
-      <li *ngFor='let quote of Quotes'>
-        {{quote.name}}
-        <app-quote-detail [quote]='quote'></app-quote-detail>
-      </li>
-    </ul>
+        <div *ngFor='let quote of quotes;let i = index'>
+          <li>{{quote.name}}</li>
+          <button (click)='toggleDetails(i)'>Details</button>
+          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+        </div>
+      </ul>
+      <p *ngIf='quote.length > 5'>Here are your quotes of the day!</p>
+      
   </div>

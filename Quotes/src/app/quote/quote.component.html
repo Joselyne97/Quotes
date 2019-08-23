@@ -1,4 +1,5 @@
-<div>
+<div class="container">
+
     <h1>My Favorite Quotes</h1>
     <hr>
     <div class="row">
@@ -6,6 +7,8 @@
           <div *ngFor='let quote of quotes;let i = index'>
             <div>
               <h4 id={{i}} appStrikethrough>{{quote.name}}</h4>
+              <!-- <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6> -->
+
               <button (click)='toggleDetails(i)' class="btn btn-primary">Details</button>
             </div>
     
@@ -14,7 +17,13 @@
             </div>
           </div>
         </div>
+
+        <div class="col-md-6">
+          <app-quote-form></app-quote-form>
+        </div>
+
       </div>
     
       <p *ngIf='quotes.length > 5'>Here are your quotes of the day!</p>
-    </div>
+    
+  </div>

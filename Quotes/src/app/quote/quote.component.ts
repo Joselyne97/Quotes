@@ -17,8 +17,8 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  completeGoal(isComplete, index){
-    if (isComplete) {
+  completeGoal(isDeleted, index){
+    if (isDeleted) {
       this.quotes.splice(index,1);
     }
   }
